@@ -1,37 +1,109 @@
-.heder_container{
+.heder__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  width: 100%;
+
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+
+  @include tablet {
+    justify-content: flex-start;
+    width: var(--tablet);
+  }
+
+  @include desktop {
+    width: var(--desktop);
+  }
+}
+
+.header__logo {
+  margin-right: 191px;
+
+  @include desktop {
+    margin-right: 735px;
+  }
+}
+
+.header__nav {
+  margin-right: 30px;
+}
+
+.header__list {
+  display: none;
+
+  @include tablet {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
-    height: 72px;
-    width: 100%;
-
-    background-color: var(--color-white);
-    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  }
 }
 
-.header-nav__list{
+.header__item:not(:last-child) {
+    padding-right: 28px;
+  }
+
+.header__navlink {
+  font-style: normal;
+  padding-top: 28px;
+padding-bottom: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  color: var(--secondary-black);
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    font-weight: 500;
+    color: var(--brand-color-green);
+    text-decoration-line: underline;
+  }
+}
+
+.header__order {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.header__button {
+  border: none;
+  width: 98px;
+  height: 32px;
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+  background: var(--brand-color-green);
+  transition: background var(--transition);
+
+  &:hover,
+  &:focus {
+    background: var(--btn-click);
+  }
+}
+
+.heder__mobile {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.header__burger {
+  fill: var(--color-dark-green);
+  transition: fill var(--transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--brand-color-yellow);
+  }
+
+  @include tablet {
     display: none;
-    
-
-    @include tablet{
-        display: flex;
-        flex-direction: row;
-
-    }
-}
-
-.header-nav__item{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.14;
-
-    color: var(--color-black);
-
-    &:hover,
-    &:focus{
-        
-        color: var(--brand-color-green);
-    }
+  }
 }
