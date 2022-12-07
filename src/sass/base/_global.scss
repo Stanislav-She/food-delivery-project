@@ -1,6 +1,6 @@
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: var(--color-white);
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-white);
 }
 
 h1,
@@ -8,25 +8,24 @@ h2,
 h3,
 h4,
 p {
-    margin-top: 0px;
-    margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-
 
 ul,
 ol {
-    list-style: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 0px;
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }

@@ -1,0 +1,76 @@
+.footer {
+  padding: 60px 0;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-image: url(../images/footer/footer-phone-480@1x.png);
+  @include retina-bgi {
+    background-image: url(../images/footer/footer-phone-480@2x.png);
+  }
+  @include mobile {
+    max-width: 767.99px;
+
+    background-image: url(../images/footer/footer-tablet-768@1x.png);
+
+    @include retina-bgi {
+      background-image: url(../images/footer/footer-tablet-768@2x.png);
+    }
+  }
+
+  @include tablet {
+    max-width: 1199.99px;
+
+    background-image: url(../images/footer/footer-tablet-768@1x.png);
+
+    @include retina-bgi {
+      background-image: url(../images/footer/footer-tablet-768@2x.png);
+    }
+  }
+  @include desktop {
+    max-width: 1280px;
+
+    background-image: url(../images/footer/footer-desktop-1200@1x.png);
+
+    @include retina-bgi {
+      background-image: url(../images/footer/footer-desktop-1200@2x.png);
+    }
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.menu-list {
+  margin-left: 81px;
+}
+
+.menu-list__item {
+  margin-bottom: 20px;
+}
+.menu .footer__subscribe-box {
+  margin-bottom: 60px;
+}
+
+.footer-title {
+  margin-bottom: 12px;
+}
+
+.subscribe__input {
+  margin-bottom: 20px;
+}
+
+.button-subscribe {
+  margin-bottom: 20px;
+}
+
+.service-link__list {
+  margin-bottom: 40px;
+}
