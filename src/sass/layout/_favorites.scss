@@ -61,8 +61,8 @@
   padding: 12px;
   border: 11px solid var(--brand-color-yellow);
   border-radius: 140px;
-  transition: border-color transform 1250ms;
   transition: border-color var(--transition);
+  transition: transform var(--transition);
 
   &:hover,
   &:focus {
@@ -76,6 +76,7 @@
     padding: 20px;
     border: 14px solid var(--brand-color-yellow);
     border-radius: 168px;
+    transition: transform var(--transition);
 
     &:hover,
     &:focus {
@@ -89,16 +90,12 @@
     padding: 24px;
     border: 16px solid var(--brand-color-yellow);
     border-radius: 197px;
-
-    &:hover,
-    &:focus {
-      border-color: var(--brand-color-green);
-    }
   }
 }
 
 .favorite__image {
   border-radius: 116px;
+  transition: transform var(--transition);
 
   @include tablet {
     border-radius: 134px;

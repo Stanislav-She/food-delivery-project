@@ -87,6 +87,9 @@
 }
 
 .header__mobile {
+  position: absolute;
+  top: 22px;
+  right: 20px;
   width: 28px;
   height: 28px;
   background-color: transparent;
