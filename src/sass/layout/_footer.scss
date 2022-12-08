@@ -127,20 +127,19 @@
   color: var(--color-black);
 }
 
-.subscribe {
+.footer-subscribe {
   @include tablet {
     display: flex;
     flex-direction: row;
     gap: 13px;
   }
 }
-.subscribe__label {
+.footer-subscribe__label {
   @include tablet {
     width: 279px;
   }
 }
-.subscribe__input {
-  margin-bottom: 20px;
+.footer-subscribe__input {
   padding: 12px;
   width: 100%;
   outline: none;
@@ -155,24 +154,67 @@
   color: var(--secondary-black);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @include tablet {
-    margin-bottom: 12px;
+  &:placeholder-shown {
+    border-color: var(--brand-color-yellow);
   }
 
-  &:focus-within:not(:invalid:required) {
+  &:focus-within {
+    border-color: var(--brand-color-yellow);
+  }
+  &:valid {
+    border-color: var(--brand-color-green);
+  }
+
+  &:focus:invalid {
     border-color: var(--brand-notvalid);
   }
+
+  &:not(:focus-within):not(:placeholder-shown):invalid {
+    border-color: var(--brand-notvalid);
+  }
+
   &:focus,
   &:hover {
     border-color: var(--color-dark-green);
   }
 }
 
+.footer-error {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  font-size: 10px;
+  line-height: 150%;
+  width: 330px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms linear;
+
+  .footer-subscribe__input:not(:focus-within):not(:placeholder-shown):invalid
+    + & {
+    width: 330px;
+    color: var(--brand-notvalid);
+    height: 15px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.footer-icon-alert {
+  width: 11px;
+  height: 11px;
+  fill: var(--brand-notvalid);
+}
+
 .footer__btn {
   text-align: right;
 }
 
-.button-subscribe {
+.footer-button-subscribe {
+  margin-top: 20px;
   margin-bottom: 20px;
   cursor: pointer;
 
@@ -189,6 +231,7 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include tablet {
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -217,6 +260,7 @@
   @include tablet {
     font-size: 12px;
     line-height: calc(14 / 12);
+    margin-top: 20px;
   }
 }
 
@@ -268,4 +312,32 @@
     font-size: 12px;
     line-height: calc(14 / 12);
   }
+}
+
+// button - back - to - top
+
+.back-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: var(--brand-color-green);
+  // display: none;
+}
+.back_to_top:hover,
+.back_to_top:focus {
+  filter: brightness(1.5);
+  outline: none;
+}
+
+.back-to-top-img {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--color-dark-green);
 }
