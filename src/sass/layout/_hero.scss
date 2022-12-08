@@ -1,23 +1,48 @@
 .hero-container {
     padding-top: 60px;
     padding-bottom: 50px;
+
+    @include desktop {
+        padding-top: 159px;
+      }
+
+
+
+
     .hero-container__title {
         font-weight: 700;
         font-size: 28px;
         line-height: 1.18;
+        
     
         margin-bottom: 28px;
     
         color: var(--color-black);
+        @include tablet {
+            font-size: 42px;
+            margin-bottom: 44px;
+            max-width: 537px;
+          }
+          @include desktop {
+            font-size: 48px;
+            margin-bottom: 28px;
+            max-width: 502px;
+          }
+        
     }
     .hero-container__text{
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
+        max-width: 336px;
     
         margin-bottom: 28px;
     
         color: var(--color-black);
+        @include tablet {
+            font-size: 16px;
+            margin-bottom: 40px;
+          }
     }
     .hero-container__order {
         width: 98px;
@@ -34,11 +59,11 @@
     
         cursor: pointer;
         border: 0;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color var( --transition);
         
         &:hover,
         &:focus {
-            background-color: #FFE450;
+            background-color: var( --btn-click);
         }
     }
     
@@ -50,24 +75,89 @@
     @include tablet {
         display: block;
         width: 320px;
+        position: absolute;
+        right: 20px;
+        top: -65px;
         
     }
+    @include desktop {
+        width: 580px;
+        height: 580px;
+        top: -288px;
+        
+      }
 
 }
 .hero-box{
     display: flex;
+    position: relative;
 }
-.slick-wrapper{
+.slick__box{
     width: 320px;
     height: 320px;
-    background: var(--color-white);
+   
 
     border-radius: 50%;
     border: 14px solid var( --brand-color-yellow);
+    @include desktop {
+        width: 580px;
+        height: 580px;
+            
+        border: 26px solid var(--brand-color-yellow);
+      }
+
 }
 
-.my-slick-prev {
-    background-image: url(../images/hero/poached768@1x.png);
-    width: 50px;
-    height: 50px;
+
+// .slick-slider {
+//     position: relative;
+   
+// }
+.slick-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 34px;
+    height: 28px;
+    @include desktop {
+        width: 48px;
+        height: 40px;
+      }
+   
+}
+.slick-slider .slick-arrow.my-slick-prev {
+    left: -7;
+    // background: url(../images/hero/left768.svg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    border: none;
+    
+    @include desktop {
+        // background: url(../images/hero/left1280.svg);
+        border-radius: 8px;
+      }
+    
+    
+}
+.slick-slider .slick-arrow.my-slick-next {
+    right: -7;
+    // background: url(../images/hero/right768.svg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    border: none;
+    @include desktop {
+        // background: url(../images/hero/right1280.svg);
+        
+      }
+}
+.slick__icon{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    // top: 8px;
+    // right: 8px;
+    fill: tomato;
+    
 }
