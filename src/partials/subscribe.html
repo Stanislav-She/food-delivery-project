@@ -1,0 +1,42 @@
+<div class="subscribe-container container">
+  <div>
+    <div class="relative-banana">
+      <img
+        srcset="
+          ./images/customers/banana-161@1.png  161w,
+          ./images/customers/banana-161@2.png  322w,
+          ./images/customers/banana-281@1.png  281w,
+          ./images/customers/banana-281@2.png  562w,
+          ./images/customers/banana-546@1.png  546w,
+          ./images/customers/banana-546@2.png 1092w
+        "
+        sizes="(min-width: 1280px) 546px, (min-width: 768px) 281px, (min-width: 480px) 161px, (min-width: 320px) 161px, 100vw"
+        src="./images/customers/banana-161@1.png"
+        alt="banana"
+        class="subscribe__banana"
+      />
+    </div>
+    <div>
+      <h2 class="customers__title">Subscribe To Get Special Offers</h2>
+      <p class="customers__card-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique.
+      </p>
+      <form class="subscribe__form">
+        <label class="subsribe__label">
+          <input
+            class="subscribe__input"
+            type="email"
+            name="mail"
+            placeholder="Enter your email"
+            required
+          />
+          <p class="error"><svg class="icon-alert" width="11" height="11" aria-label="Alert">
+            <use href="./images/customers/icons.svg#icon-alert"></use>
+          </svg> Not a valid email address example@email.com</p>
+        </label>
+        <button type="submit" class="subscribe__submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>

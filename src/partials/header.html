@@ -12,7 +12,7 @@
       <nav>
         <ul class="header__list">
           <li class="header__item">
-            <a href="#" class="header__navlink link">Home</a>
+            <a href="./index.html" class="header__navlink link">Home</a>
           </li>
           <li class="header__item">
             <a href="#" class="header__navlink link">About</a>
@@ -34,10 +34,38 @@
       <button type="button" class="header__button button">Order Now</button>
     </div>
 
-    <button class="heder__mobile" type="button">
-    <svg class="header__burger" width="28" height="28">
-      <use href="./images/heder/symbol-defs.svg#burger-menu"></use>
-    </svg>
+    <button class="header__mobile js-open-menu" type="button">
+      <svg class="header__burger" width="28" height="28">
+        <use href="./images/heder/symbol-defs.svg#burger-menu"></use>
+      </svg>
     </button>
+
+    <div class="header__submobile js-menu-container" id="mobile-menu">
+      <button class="header__mobile-button js-close-menu">
+        <svg class="header__mobile-svg" width="24" height="24">
+          <use href="./images/heder/symbol-defs.svg#close"></use>
+        </svg>
+      </button>
+
+      <nav class="header__mobile-nav">
+        <ul class="header__mobile-item">
+          <li class="header_mobile-list header_mobile-list__first">
+            <a href="./index.html" class="header_mobile-link link">Home</a>
+          </li>
+          <li class="header_mobile-list">
+            <a href="#" class="header_mobile-link link">About</a>
+          </li>
+          <li class="header_mobile-list">
+            <a href="#" class="header_mobile-link link">Service</a>
+          </li>
+          <li class="header_mobile-list">
+            <a href="#" class="header_mobile-link link">Menu</a>
+          </li>
+          <li class="header_mobile-list header_mobile-list__fifth">
+            <a href="#" class="header_mobile-link link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
