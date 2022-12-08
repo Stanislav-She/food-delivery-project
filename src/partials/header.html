@@ -1,40 +1,71 @@
 <header>
-    <div class="heder_container container">
-
-        <div class="header-logo">
-            <a class="header-logo__link" href="./index.html">
-                <svg class="header-logo__icon" width="66" height="52">
-                    <use href="./images/heder/symbol-defs.svg#icon-logo"></use>
-                </svg>
-            </a>
-        </div>
-
-        <div class="header-nav">
-            <nav>
-                <ul class="header-nav__list">
-                    <li class="header-nav__item">
-                        <a href="#" class="header-nav__link">Home</a>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#" class="header-nav__link">About</a>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#" class="header-nav__link">Service</a>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#" class="header-nav__link">Menu</a>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#" class="header-nav__link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="header-btn">
-            <button type="button" class="">Order Now</button>
-        </div>
-
+  <div class="heder__container container">
+    <div class="header__logo">
+      <a class="header__logolink link" href="./index.html">
+        <svg class="header__logosvg" width="66" height="52">
+          <use href="./images/heder/symbol-defs.svg#icon-logo"></use>
+        </svg>
+      </a>
     </div>
-    
+
+    <div class="header__nav">
+      <nav>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="./index.html" class="header__navlink link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__navlink link">About</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__navlink link">Service</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__navlink link">Menu</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__navlink link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__order">
+      <button type="button" class="header__button button">Order Now</button>
+    </div>
+
+    <button class="header__mobile js-open-menu" type="button">
+      <svg class="header__burger" width="28" height="28">
+        <use href="./images/heder/symbol-defs.svg#burger-menu"></use>
+      </svg>
+    </button>
+
+    <div class="header__submobile js-menu-container" id="mobile-menu">
+      <button class="header__mobile-button js-close-menu">
+        <svg class="header__mobile-svg" width="24" height="24">
+          <use href="./images/heder/symbol-defs.svg#close"></use>
+        </svg>
+      </button>
+
+      <nav class="header__mobile-nav">
+        <ul class="header__mobile-item">
+          <li class="header_mobile-list header_mobile-list__first">
+            <a href="./index.html" class="header_mobile-link link">Home</a>
+          </li>
+          <li class="header_mobile-list">
+            <a href="#" class="header_mobile-link link">About</a>
+          </li>
+          <li class="header_mobile-list">
+            <a href="#" class="header_mobile-link link">Service</a>
+          </li>
+          <li class="header_mobile-list">
+            <a href="#" class="header_mobile-link link">Menu</a>
+          </li>
+          <li class="header_mobile-list header_mobile-list__fifth">
+            <a href="#" class="header_mobile-link link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

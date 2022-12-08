@@ -1,9 +1,123 @@
-.favorites_cover {
-    width: 280px;
-    border: 11px solid #FFE550;
-    border-radius: 140px;
+.favorites {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.favorites__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+
+  @include tablet {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+}
+
+.favorites__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.favorites__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+
+  @include tablet {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.favorites__item {
+  display: flex;
+  justify-content: center;
+  width: 280px;
+  height: 282px;
+  padding: 12px;
+  border: 11px solid var(--brand-color-yellow);
+  border-radius: 140px;
+  transition: border-color transform 1250ms;
+  transition: border-color var(--transition);
+
+  &:hover,
+  &:focus {
+    border-color: var(--brand-color-green);
+    transform: scale(1.1);
+  }
+
+  @include tablet {
+    width: 336px;
+    height: 338px;
+    padding: 20px;
+    border: 14px solid var(--brand-color-yellow);
+    border-radius: 168px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.15);
+    }
+  }
+
+  @include desktop {
+    width: 394px;
+    height: 397px;
+    padding: 24px;
+    border: 16px solid var(--brand-color-yellow);
+    border-radius: 197px;
+
+    &:hover,
+    &:focus {
+      border-color: var(--brand-color-green);
+    }
+  }
 }
 
 .favorite__image {
-    border-radius: 125px;
+  border-radius: 116px;
+
+  @include tablet {
+    border-radius: 134px;
+  }
+
+  @include desktop {
+    border-radius: 164px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.favorites__item--hidden {
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
 }
