@@ -41,13 +41,13 @@
 }
 
 .header__item:not(:last-child) {
-    padding-right: 28px;
-  }
+  padding-right: 28px;
+}
 
 .header__navlink {
   font-style: normal;
   padding-top: 28px;
-padding-bottom: 28px;
+  padding-bottom: 28px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.1;
@@ -86,7 +86,7 @@ padding-bottom: 28px;
   }
 }
 
-.heder__mobile {
+.header__mobile {
   width: 28px;
   height: 28px;
   background-color: transparent;

@@ -61,12 +61,13 @@
   padding: 12px;
   border: 11px solid var(--brand-color-yellow);
   border-radius: 140px;
+  transition: border-color transform 1250ms;
   transition: border-color var(--transition);
-
 
   &:hover,
   &:focus {
     border-color: var(--brand-color-green);
+    transform: scale(1.1);
   }
 
   @include tablet {
@@ -75,11 +76,10 @@
     padding: 20px;
     border: 14px solid var(--brand-color-yellow);
     border-radius: 168px;
-   
 
     &:hover,
     &:focus {
-      border-color: var(--brand-color-green);
+      transform: scale(1.15);
     }
   }
 
@@ -97,7 +97,6 @@
   }
 }
 
-
 .favorite__image {
   border-radius: 116px;
 
@@ -107,6 +106,11 @@
 
   @include desktop {
     border-radius: 164px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
   }
 }
 
