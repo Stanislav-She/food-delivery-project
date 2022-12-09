@@ -1,26 +1,7 @@
-.customers_container {
-  // background-color: var(--brand-color-yellow);
-  padding-top: 60px;
-  padding-bottom: 17px;
-  max-width: 1280px;
+.section-customers {
   background-repeat: no-repeat;
+  // background-size: contain;
   background-size: 100% 100%;
-  // background-position: center;
-
-  @media screen and(max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 60px;
-  }
-  @media screen and(min-width: 768px) {
-    padding-top: 60px;
-    padding-bottom: 120px;
-  }
-  @media screen and(min-width: 1280px) {
-    padding-top: 100px;
-    padding-bottom: 200px;
-  }
 
   background-image: url(../images/customers/bcg-480@1.png);
   @media screen and (min-device-pixel-ratio: 2),
@@ -62,20 +43,37 @@
   }
 }
 
+.customers_container {
+  padding-top: 60px;
+  padding-bottom: 17px;
+  max-width: 1280px;
+
+  @media screen and(max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+  @media screen and(min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+  @media screen and(min-width: 1280px) {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+}
+
 .customers__title {
   color: var(--color-black);
   font-weight: 700;
   font-size: 28px;
   line-height: 33px;
-  // max-width: 280px;
   @media screen and(min-width: 768px) {
     font-size: 42px;
     line-height: 49px;
     max-width: 656px;
   }
-  // @media screen and(min-width: 1280px) {
-  //   margin-top: 46px;
-  // }
 }
 
 .customers__card-description {
@@ -83,7 +81,7 @@
   font-size: 14px;
   line-height: 16px;
   margin-top: 20px;
-  // max-width: 280px;
+
   @media screen and(min-width: 768px) {
     font-size: 16px;
     line-height: 19px;
@@ -124,7 +122,6 @@
     margin-right: auto;
   }
   @media screen and(min-width: 768px) {
-    // min-width: 280px;
     max-width: 336px;
   }
   @media screen and(min-width: 1280px) {
@@ -173,10 +170,3 @@
   left: 64px;
   font-size: 14px;
 }
-
-// .customers__image {
-//   padding-top: 17px;
-//   padding-bottom: 17px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
