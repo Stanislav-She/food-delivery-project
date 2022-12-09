@@ -324,7 +324,8 @@
   height: 50px;
   border-color: transparent;
   border-radius: 50%;
-  background-color: var(--brand-color-green);
+  background-color: rgba(187, 243, 48, 0.5);
+
   // display: none;
 }
 .back_to_top:hover,
@@ -333,11 +334,15 @@
   outline: none;
 }
 
+.back-to-top__hide {
+  display: none;
+}
+
 .back-to-top-img {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: var(--color-dark-green);
+  fill: rgba($color: #7eb101, $alpha: 0.8);
 }
