@@ -2,9 +2,7 @@
   padding-bottom: 60px;
   max-width: 1280px;
   position: relative;
-  margin-left: none;
-  margin: none;
-  //   position: relative;
+
   @media screen and(max-width: 767px) {
     padding-top: 52px;
     display: flex;
@@ -24,9 +22,6 @@
   position: relative;
 }
 .subscribe__banana {
-  // padding-bottom: 17px;
-  // margin-left: auto;
-  // margin-right: auto;
   @media screen and(max-width: 767px) {
     position: absolute;
     top: -95px;
@@ -42,41 +37,38 @@
   }
   @media screen and(min-width: 768px) {
     position: absolute;
-    // margin-right: 32px;
+
     margin-left: auto;
     top: -157px;
   }
   @media screen and(min-width: 1280px) {
     position: absolute;
-    // margin-right: 16px;
-    // right: 10px;
-    // float: right;
+
     padding-bottom: 0;
   }
 }
 
 .subscribe__form {
+  display: flex;
+  flex-direction: row;
   @media screen and(max-width: 767px) {
     display: flex;
     flex-direction: column;
   }
 }
-
-.subscribe__label {
-  // display: block;
-  // flex-direction: row;
+.secondary {
+  margin-bottom: 24px;
 }
-
 .subscribe__input {
   outline: none;
   border: 1px solid var(--brand-color-yellow);
   border-radius: 25px;
   padding: 12px 12px 12px 11px;
   font-weight: 400;
-  margin-top: 24px;
+
   font-size: 12px;
   line-height: 150%;
-  // max-width: 280px;
+
   @media screen and(max-width: 767px) {
     display: block;
     width: 100%;
@@ -100,10 +92,14 @@
 .subscribe__input:focus:invalid {
   border: 1px solid var(--brand-notvalid);
 }
-// .subscribe__input:focus-within {
-//   border: 1px solid var(--brand-color-yellow);
-// }
+.subscribe__input:not(:focus-within):not(:placeholder-shown):invalid {
+  border-color: var(--brand-notvalid);
+}
+.sub-wrap {
+  position: relative;
+}
 .error {
+  margin-top: 5px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -115,8 +111,8 @@
   opacity: 0;
   visibility: hidden;
   transition: all 300ms linear;
-  // color: var (--brand-notvalid);
 }
+
 .subscribe__input:not(:focus-within):not(:placeholder-shown):invalid + .error {
   width: 330px;
   color: var(--brand-notvalid);
@@ -132,7 +128,6 @@
 .subscribe__submit {
   padding: 11px 22px;
   width: 103px;
-  align-items: right;
   border: none;
   background-color: var(--brand-color-green);
   border-radius: 20px;
@@ -140,9 +135,8 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 150%;
-
   margin-left: 32px;
-  // -------------------------------- 767 768? ---------------------------
+
   @media screen and(max-width: 767px) {
     align-self: flex-end;
     display: block;
