@@ -20,15 +20,18 @@ const btnUp = {
             scrollY > 400 ? this.show() : this.hide();
         });
 
-        document.querySelector('.back-to-top').onclick = () => {
+        // document.querySelector('.back-to-top').onclick = () => {
 
-            window.scrollTo({
-                top: 0,
-                left: 0,
+        //     window.scrollTo({
+        //         top: 0,
+        //         left: 0,
+        //         behavior: 'smooth'
+        //     });
+        // }
 
-            });
-        }
-
+        // $(scrollElem).trigger("click", function () {
+        //     $('html, body').animate({ scrollTop: 0 }, 600, scrollStyle); return false;
+        // });
 
     }
 }

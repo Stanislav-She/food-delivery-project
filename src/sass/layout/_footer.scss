@@ -346,3 +346,6 @@
   transform: translate(-50%, -50%);
   fill: rgba($color: #7eb101, $alpha: 0.8);
 }
+html {
+  scroll-behavior: smooth;
+}
