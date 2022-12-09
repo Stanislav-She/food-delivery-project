@@ -1,15 +1,3 @@
-var upperLimit = 100;
-
-// Our scroll link element
-var scrollElem = $('a#scroll-to-top');
-
-// Scroll Speed. Change the number to change the speed
-var scrollSpeed = 600;
-
-// Choose your easing effect http://jqueryui.com/resources/demos/effect/easing.html
-var scrollStyle = 'swing';
-
-
 
 
 
@@ -37,13 +25,10 @@ const btnUp = {
             window.scrollTo({
                 top: 0,
                 left: 0,
-                behavior: 'smooth'
+
             });
         }
 
-        // $(scrollElem).trigger("click", function () {
-        //     $('html, body').animate({ scrollTop: 0 }, 600, scrollStyle); return false;
-        // });
 
     }
 }
