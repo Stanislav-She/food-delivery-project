@@ -66,7 +66,7 @@
 
 .one-time{
     display: none;
-
+    
     @include tablet {
         display: block;
         width: 320px;
@@ -88,10 +88,10 @@
     position: relative;
 }
 .slick__box{
+    // position: fixed;
     width: 320px;
     height: 320px;
-   
-
+    
     border-radius: 50%;
     border: 14px solid var( --brand-color-yellow);
     @include desktop {
@@ -117,8 +117,10 @@
 }
 
 .slick-slider .slick-arrow.my-slick-prev {
-    left: -7;
-    // background: url(../images/hero/left768.svg);
+    left: -9;
+    background: url(../images/hero/prev1tab.svg);
+    width: 34px;
+    height: 28px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     border: none;
@@ -128,17 +130,23 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
         
     }
+    
            
     @include desktop {
-        // background: url(../images/hero/left1280.svg);
+        background: url(../images/hero/prew1.svg);
         border-radius: 8px;
-        // transition: fill, box-shadow var(--transition);
-        // &.slick-arrow.my-slick-prev:hover{
-        //     fill:var(--brand-color-green);
-        // }
+        width: 48px;
+        height: 40px;
+        transition: box-shadow var(--transition), background var(--transition);
+
+       
         &.slick-arrow.my-slick-prev:focus {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-            }
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        }
+        &.slick-arrow.my-slick-prev:hover {
+            background: url(../images/hero/prev1hover.svg);
+        }
+            
       }
     
     
@@ -146,7 +154,9 @@
 
 .slick-slider .slick-arrow.my-slick-next {
     right: -7;
-    // background: url(../images/hero/right768.svg);
+    background: url(../images/hero/next1tab.svg);
+    width: 34px;
+    height: 28px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     border: none;
@@ -154,30 +164,22 @@
     &.slick-arrow.my-slick-next:hover,
     &.slick-arrow.my-slick-next:focus {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+
         
     }
     @include desktop {
-        // background: url(../images/hero/right1280.svg);
+        background: url(../images/hero/next1.svg);
         border-radius: 8px;
-        // transition: fill, box-shadow var(--transition);
-        // &.slick-arrow.my-slick-prev:hover{
-        //     fill:var(--brand-color-green);
-        // }
-        &.slick-arrow.my-slick-prev:focus {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        width: 48px;
+        height: 40px;
+        transition: box-shadow var(--transition), background var(--transition);
+      
+        &.slick-arrow.my-slick-next:hover,
+        &.slick-arrow.my-slick-next:focus {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+            background: url(../images/hero/next1hover.svg);
             }
         
       }
 }
 
-// .slick__icon{
-//     position: absolute;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     cursor: pointer;
-//     top: 8px;
-//     right: 8px;
-//     fill: tomato;
-    
-// }
