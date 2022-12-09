@@ -67,7 +67,7 @@
             </ul>
             <ul class="offerings__list-btn">
                 <li>
-                    <button class="button offerings__btn--light" type="button" data-modal-2-open>
+                    <button class="button offerings__btn--light" type="button" data-modal-open>
                         Order Now
                     </button>
                 </li>
@@ -103,8 +103,8 @@
                 <div class="modal__wrapper">
                     <label class="modal__label" for="phone">Phone number</label>
                     <input class="modal__input" id="phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" type="tel"
-                        name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="+xx(xxx)xxx_xx_xx"
-                        minlength="10" maxlength="15" required />
+                        name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                        title="+xx(xxx)xxx_xx_xx" minlength="10" maxlength="15" required />
                     <p class="modal__error">
                         <svg width="12" height="12">
                             <use href="./images/offerings/icons.svg#icon-error"></use>

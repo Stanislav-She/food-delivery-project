@@ -220,27 +220,30 @@
   &:focus {
     border: 2px solid var(--color-dark-green);
   }
+  @include desktop {
+    display: none;
+  }
 }
 
   //   modal-2
 
-// .backdrop {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.2);
-//   opacity: 1;
-//   transition: opacity var(--transition), visibility var(--transition);
-//   overflow: scroll;
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--transition), visibility var(--transition);
+  overflow: scroll;
 
-//   &.is-hidden {
-//     opacity: 0;
-//     pointer-events: none;
-//     visibility: hidden;
-//   }
-// }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
 .modal {
   position: absolute;
   display: flex;
@@ -271,12 +274,12 @@
     transform: translate(-50%, -50%) scale(1);
   }
 
-  // .backdrop.is-hidden & {
-  //   transform: translateX(-50%) scale(0.6);
-  //   @include desktop {
-  //     transform: translate(-50%, -50%) scale(0.6);
-  //   }
-  // }
+  .backdrop.is-hidden & {
+    transform: translateX(-50%) scale(0.6);
+    @include desktop {
+      transform: translate(-50%, -50%) scale(0.6);
+    }
+  }
 }
 .modal__title {
   font-size: 24px;
@@ -338,6 +341,9 @@
     border-color: var(--brand-color-green);
     outline: none
   }
+   &:focus:invalid {
+    border-color: var(--brand-notvalid);
+    }
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
@@ -354,9 +360,9 @@ position: absolute;
 left: 12px;
 display: flex;
 align-items: center;
-// overflow: hidden;
-// opacity: 0;
-// visibility: hidden;
+overflow: hidden;
+opacity: 0;
+visibility: hidden;
 transition: all var(--transition);
 @include desktop {
   font-size: 13px;
