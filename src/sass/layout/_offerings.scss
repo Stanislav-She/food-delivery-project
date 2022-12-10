@@ -73,7 +73,7 @@
     display: none;
   }
 }
-.img {
+.img__tablet {
   display: flex;
   align-items: baseline;
   gap: 44px;
@@ -137,6 +137,43 @@
   height: 48px;
   background-color: var(--color-white);
   border-radius: 50px;
+
+  -webkit-animation: pulsing 2s infinite;
+  animation: pulsing 2s infinite;
+
+  @-webkit-keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+
+    50% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+  }
+
+  @keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+
+    50% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+  }
 }
 .icon__offerings {
   color: var(--color-dark-green);
@@ -171,7 +208,7 @@
   background-color: var(--color-white);
   border: 2px solid var(--color-dark-green);
   transition: all var(--transition);
- 
+
   &:hover,
   &:focus,
   &:active {
