@@ -12,7 +12,6 @@
   }
 
   @include mobile {
-    max-width: 768px;
     background-image: url(../images/offerings/bgimg-480-1@1x-min.jpg);
 
     @include retina-bgi {
@@ -27,7 +26,6 @@
   }
 
   @include desktop {
-    max-width: 1280px;
     background-image: none;
     padding-top: 177px;
     padding-bottom: 43px;
