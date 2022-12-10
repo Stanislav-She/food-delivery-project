@@ -1,36 +1,37 @@
 <section class="offerings offerings__section" id="offerings">
-    <div class="offerings__container container">
-        <div class="offerings__box-img">
-            <ul class="offerings__img img">
-                <li class="img__apple img__apple--big">
-                    <img srcset="
-              ./images/offerings/apple-320@1x.png   280w,
-              ./images/offerings/apple-320@2x.png   560w,
-              ./images/offerings/apple-768@1x.png   357w,
-              ./images/offerings/apple-768@2x.png   714w,
-              ./images/offerings/apple-1280@1x.png  550w,
-              ./images/offerings/apple-1280@2x.png 1100w
-            " sizes="(min-width: 1280px) 550px, (min-width: 768px) 357px, (min-width: 320px) 280px, 100vw"
-                        src="./images/offerings/apple-1280@1x.png" alt="green apple" />
-                </li>
-                <div class="img-desktop">
-                    <li class="img__apple img__apple--transparent">
+    <div class="container offerings__container">
+        <div class="offerings__img-box">
+            <div class="offerings__img">
+                <img srcset="
+          ./images/offerings/apple-320@1x.png   280w,
+          ./images/offerings/apple-320@2x.png   560w,
+          ./images/offerings/apple-768@1x.png   357w,
+          ./images/offerings/apple-768@2x.png   714w,
+          ./images/offerings/apple-1280@1x.png  550w,
+          ./images/offerings/apple-1280@2x.png 1100w
+        " sizes="(min-width: 1280px) 550px, (min-width: 768px) 357px, (min-width: 320px) 280px, 100vw"
+                    src="./images/offerings/apple-1280@1x.png" alt="green apple" />
+            </div>
+            <div class="offerings__img--transparent">
+                <ul class="img">
+                    <li>
                         <img srcset="
-                ./images/offerings/apple-768-2@1x.png 166w,
-                ./images/offerings/apple-768-2@2x.png 332w
-              " sizes="166px" src="./images/offerings/apple-768-2@1x.png" alt="green apple" />
+              ./images/offerings/apple-768-2@1x.png 166w,
+              ./images/offerings/apple-768-2@2x.png 332w
+            " sizes="166px" src="./images/offerings/apple-768-2@1x.png" alt="green apple" />
                     </li>
-                    <li class="img__apple img__apple--transparent">
+                    <li>
                         <img srcset="
-                ./images/offerings/apple-768-3@1x.png 108w,
-                ./images/offerings/apple-768-3@2x.png 216w
-              " sizes="108px" src="./images/offerings/apple-768-3@1x.png" alt="green apple" />
+              ./images/offerings/apple-768-3@1x.png 108w,
+              ./images/offerings/apple-768-3@2x.png 216w
+            " sizes="108px" src="./images/offerings/apple-768-3@1x.png" alt="green apple" />
                     </li>
-                </div>
-            </ul>
+                </ul>
+            </div>
         </div>
+
         <div class="offerings__box">
-            <div class="offerings__content">
+            <div class="offerings__content-title">
                 <h2 class="offerings__title">What’s Special About Our Offerings</h2>
                 <p class="offerings__descr">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -67,7 +68,7 @@
             </ul>
             <ul class="offerings__list-btn">
                 <li>
-                    <button class="button offerings__btn--light js-open-modal" type="button" data-modal="1">
+                    <button type="button" class="button offerings__btn--light js-open-modal" data-modal="3">
                         Order Now
                     </button>
                 </li>
@@ -83,153 +84,3 @@
         </div>
     </div>
 </section>
-<!-- momal-2 -->
-<div class="backdrop active js-backdrop-modal">
-    <div class="modal modal1 active" data-modal="1">
-        <h2 class="modal__title">Order Form</h2>
-        <form class="modal__form">
-            <div class="modal__form-box">
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="name">Name</label>
-                    <input class="modal__input" id="name" placeholder="Your name" type="text" name="name" minlength="2"
-                        maxlength="20" pattern="[a-zA-Zа-яА-ЯіІїЇ]+" required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspThe name must be between 3 and 25 characters
-                    </p>
-                </div>
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="phone">Phone number</label>
-                    <input class="modal__input" id="phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" type="tel"
-                        name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-                        title="+xx(xxx)xxx_xx_xx" minlength="10" maxlength="15" required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspThis phone must be in the format 099 000 00 00
-                    </p>
-                </div>
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="mail">E-mail</label>
-                    <input class="modal__input" id="mail" placeholder="example@gmail.com" type="email" name="mail"
-                        required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspPlease enter a valid email address
-                    </p>
-                </div>
-            </div>
-            <div class="modal__btn-box">
-                <button class="modal__btn btn" type="submit">Send</button>
-            </div>
-        </form>
-        <button class="modal__btn-close button js-modal-close">
-            <svg width="18" height="18">
-                <use href="./images/offerings/icons.svg#icon-close"></use>
-            </svg>
-        </button>
-    </div>
-    <div class="modal modal2 active" data-modal="2">
-        <h2 class="modal__title">Order Form</h2>
-        <form class="modal__form">
-            <div class="modal__form-box">
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="name">Name</label>
-                    <input class="modal__input" id="name" placeholder="Your name" type="text" name="name" minlength="2"
-                        maxlength="20" pattern="[a-zA-Zа-яА-ЯіІїЇ]+" required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspThe name must be between 3 and 25 characters
-                    </p>
-                </div>
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="phone">Phone number</label>
-                    <input class="modal__input" id="phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" type="tel"
-                        name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-                        title="+xx(xxx)xxx_xx_xx" minlength="10" maxlength="15" required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspThis phone must be in the format 099 000 00 00
-                    </p>
-                </div>
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="mail">E-mail</label>
-                    <input class="modal__input" id="mail" placeholder="example@gmail.com" type="email" name="mail"
-                        required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspPlease enter a valid email address
-                    </p>
-                </div>
-            </div>
-            <div class="modal__btn-box">
-                <button class="modal__btn btn" type="submit">Send</button>
-            </div>
-        </form>
-        <button class="modal__btn-close button js-modal-close">
-            <svg width="18" height="18">
-                <use href="./images/offerings/icons.svg#icon-close"></use>
-            </svg>
-        </button>
-    </div>
-    <div class="modal modal3 active" data-modal="3">
-        <h2 class="modal__title">Order Form</h2>
-        <form class="modal__form">
-            <div class="modal__form-box">
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="name">Name</label>
-                    <input class="modal__input" id="name" placeholder="Your name" type="text" name="name" minlength="2"
-                        maxlength="20" pattern="[a-zA-Zа-яА-ЯіІїЇ]+" required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspThe name must be between 3 and 25 characters
-                    </p>
-                </div>
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="phone">Phone number</label>
-                    <input class="modal__input" id="phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" type="tel"
-                        name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-                        title="+xx(xxx)xxx_xx_xx" minlength="10" maxlength="15" required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspThis phone must be in the format 099 000 00 00
-                    </p>
-                </div>
-                <div class="modal__wrapper">
-                    <label class="modal__label" for="mail">E-mail</label>
-                    <input class="modal__input" id="mail" placeholder="example@gmail.com" type="email" name="mail"
-                        required />
-                    <p class="modal__error">
-                        <svg width="12" height="12">
-                            <use href="./images/offerings/icons.svg#icon-error"></use>
-                        </svg>
-                        &nbspPlease enter a valid email address
-                    </p>
-                </div>
-            </div>
-            <div class="modal__btn-box">
-                <button class="modal__btn btn" type="submit">Send</button>
-            </div>
-        </form>
-        <button class="modal__btn-close button js-modal-close">
-            <svg width="18" height="18">
-                <use href="./images/offerings/icons.svg#icon-close"></use>
-            </svg>
-        </button>
-    </div>
-</div>
