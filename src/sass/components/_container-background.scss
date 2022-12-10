@@ -1,0 +1,23 @@
+.container-background {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @include tablet {
+    background-image: url(../images/offerings/bgimg-768-1@1x-min.jpg);
+    background-size: 768px 1246px;
+
+    @include retina-bgi {
+      background-image: url(../images/offerings/bgimg-768-1@2x-min.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/offerings/bgimg-1280-1@1x-min.jpg);
+    background-size: 1280px 924px;
+
+    @include retina-bgi {
+      background-image: url(../images/offerings/bgimg-1280-1@2x-min.jpg);
+    }
+  }
+}
