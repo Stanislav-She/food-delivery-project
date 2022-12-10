@@ -1,14 +1,16 @@
 .section-customers {
   background-repeat: no-repeat;
-  // background-size: contain;
-  background-size: 100% 100%;
+  background-size: contain;
+
   margin: 0 auto;
 
   background-image: url(../images/customers/bcg-480@1.png);
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background-image: url(../images/customers/bcg-480@2.png);
+    background-size: 100% 100%;
   }
 
   @media screen and(min-width: 480px) {
@@ -19,12 +21,14 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background-image: url(../images/customers/bcg-480@2.png);
+      background-size: 100% 100%;
     }
   }
 
   @media screen and(min-width: 768px) {
     background-image: url(../images/customers/bcg-768@1.png);
-    max-width: 1280px;
+    max-width: 768px;
+    background-size: 100% 100%;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -34,7 +38,7 @@
   }
   @media screen and(min-width: 1280px) {
     background-image: url(../images/customers/bcg-1280@1.png);
-    max-width: 1600px;
+    max-width: 1280px;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
