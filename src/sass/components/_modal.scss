@@ -153,15 +153,10 @@
     font-size: 13px;
     line-height: 18.2px;
   }
-}
-
-.modal__input:not(:focus-within):not(:placeholder-shown):invalid
-  + .modal__error {
-  width: 100%;
-  color: var(--brand-notvalid);
-  height: 15px;
-  opacity: 1;
-  visibility: visible;
+  .modal__input:not(:focus-within):not(:placeholder-shown):invalid + & {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .modal__input:not(:focus-within):not(:placeholder-shown):invalid {
@@ -182,17 +177,12 @@
   padding: 10px 0;
   background-color: var(--color-white);
   border: 2px solid var(--color-dark-green);
-  border-radius: 30px;
   transition: background-color var(--transition);
   &:hover,
   &:focus,
   &:active {
     background-color: var(--brand-color-green);
   }
-  // &:disabled {
-  //     border: 2px solid var(--brand-notvalid);
-  //       background-color: var(--color-white);
-  // }
 }
 .modal__btn-close {
   display: flex;
